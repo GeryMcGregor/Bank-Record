@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+            //12:35 https://www.youtube.com/watch?v=4-PyiuVaYRc ntar coba ganti compiler path dan intellisense
+        }   //file:///C:/Program%20Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin
+    ],
+    "version": 4
+}
