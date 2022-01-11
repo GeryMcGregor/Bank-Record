@@ -1,4 +1,13 @@
 {
+    // "editor.bracketPairColorization.enabled": true,
+    // "editor.guides.bracketPairs":"active",
+    // "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    // "bracket-pair-colorizer-2.forceIterationColorCycle": false,
+    // "bracket-pair-colorizer-2.colors": [
+    //     "Gold",
+    //     "Orchid",
+    //     "LightSkyBlue"
+    // ],
     "C_Cpp.errorSquiggles": "Disabled",
     "editor.fontSize": 16,
     "window.zoomLevel": 0.6,
