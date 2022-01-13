@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 bool account = false;
@@ -37,6 +36,8 @@ void mainMenu()
         if (account == true)
         {
             cout << "You already have an account !" << endl;
+            cin.sync();
+            cin.get();
             mainMenu();
         }
         else
@@ -44,6 +45,7 @@ void mainMenu()
             account = true;
             cout << "An account has been successfully created !" << endl;
             cout << "Proceed to main menu..." << endl;
+            cin.sync();
             cin.get();
             mainMenu();
         }
@@ -52,14 +54,20 @@ void mainMenu()
         if (account == true)
         {
             float transferValue;
-            cout << "Money to transfer: ";
+            cout << "Money to Deposit: ";
             cin >> transferValue;
 
-            accountBalance + transferValue = accountBalance;
-            cout << transferValue << "has been transferred to your account" << endl;
+            accountBalance += transferValue;
+            cout << "$" << transferValue << " has been transferred to your account" << endl;
+            cin.sync();
+            cin.get();
             mainMenu();
-        }else {
+        }
+        else
+        {
             cout << "Please make an account first !" << endl;
+            cin.sync();
+            cin.get();
             mainMenu();
         }
         break;
@@ -67,23 +75,77 @@ void mainMenu()
         if (account == true)
         {
             float transferValue;
-            
+            cout << "Withdrawal amount: ";
+            cin >> transferValue;
+
+            if (accountBalance >= transferValue)
+            {
+                accountBalance -= transferValue;
+                cout << "$" << transferValue << " has been withdrawn from your account" << endl;
+                cin.sync();
+                cin.get();
+                mainMenu();
+            }
+            else
+            {
+                cout << "Account balance is insufficient !" << endl;
+                cin.sync();
+                cin.get();
+                mainMenu();
+            }
         }
-        
-
-
+        else
+        {
+            cout << "Please make an account first !" << endl;
+            cin.sync();
+            cin.get();
+            mainMenu();
+        }
         break;
     case 4:
-        // code block
+        if (account == true)
+        {
+            cout << "Your account balance is $" << accountBalance << endl;
+            cin.sync();
+            cin.get();
+            mainMenu();
+        }
+        else
+        {
+            cout << "Please make an account first !" << endl;
+            cin.sync();
+            cin.get();
+            mainMenu();
+        }
         break;
     case 5:
-        // code block
+        cout << "[Implementation coming soon !]" << endl;
+        cin.sync();
+        cin.get();
+        mainMenu();
         break;
     case 6:
-        // code block
+        if (account == true)
+        {
+            cout << "Your account has been closed!" << endl;
+            account = false;
+            cin.sync();
+            cin.get();
+            mainMenu();
+        }
+        else
+        {
+            cout << "You don't have an account yet !" << endl;
+            cin.sync();
+            cin.get();
+            mainMenu();
+        }
         break;
     case 7:
-        // code block
+        cout << "[Implementation coming soon !]" << endl;
+        cin.sync();
+        cin.get();
+        mainMenu();
         break;
     case 8:
         return;
